@@ -1,5 +1,12 @@
 # Put the ZCOMPDUMP in the cache directory to not clog up the home directory
 export ZSH_COMPDUMP="${HOME}/.cache/.zcompdump-${HOST}"
+export ZSH_CACHE_DIR="${HOME}/.cache"
+
+if [ ! -d "$ZSH_CACHE_DIR" ]; then
+    mkdir -p "$ZSH_CACHE_DIR"
+fi
+
+fpath=($ZSH_CACHE_DIR $fpath)
 
 # source .profile
 source "${HOME}/.profile"
@@ -23,8 +30,7 @@ antigen use oh-my-zsh
 # Load the oh-my-zsh plugins
 antigen bundle git
 antigen bundle sudo
-antigen bundle docker 
-antigen bundle docker-compose 
+antigen bundle docker-compose
 antigen bundle command-not-found
 
 # Load external plugins
