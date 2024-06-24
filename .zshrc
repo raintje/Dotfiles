@@ -37,11 +37,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Apply Antigen bundles
 antigen apply
 
-export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('code')
-export NVM_AUTO_USE=true
-export NVM_COMPLETION=true
-
 # History
 HISTSIZE=5000
 HISTFILE="${HOME}/.cache/.zsh_history"
