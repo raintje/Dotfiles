@@ -6,7 +6,7 @@ if [ ! -d "$ZSH_CACHE_DIR" ]; then
     mkdir -p "$ZSH_CACHE_DIR"
 fi
 
-fpath=($ZSH_CACHE_DIR $fpath)
+(( ${fpath[(Ie)"$ZSH_CACHE_DIR/completions"]} )) || fpath=("$ZSH_CACHE_DIR/completions" $fpath)
 
 # source .profile
 source "${HOME}/.profile"
@@ -30,6 +30,7 @@ antigen use oh-my-zsh
 # Load the oh-my-zsh plugins
 antigen bundle git
 antigen bundle sudo
+antigen bundle docker
 antigen bundle docker-compose
 antigen bundle command-not-found
 
