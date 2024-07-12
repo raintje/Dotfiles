@@ -1,4 +1,4 @@
-export EDITOR=code
+export EDITOR=hx
 export SHELL=zsh
 
 # nvm
