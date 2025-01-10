@@ -37,7 +37,6 @@ antigen bundle command-not-found
 # Load external plugins
 antigen bundle Aloxaf/fzf-tab
 antigen bundle lukechilds/zsh-nvm
-antigen bundle supercrabtree/k
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
